@@ -7,11 +7,14 @@ export default Controller.extend({
 	repo: service(),
 	todoValue: '',
 	actions: {
-		createTodo(e = null) {
+		createTodo(e) {
+			
 			this.set('todoValue', e.target.value.trim());
 			if (e.keyCode === 13 && !isBlank(e.target.value)) {
 				this.set('todoValue', e.target.value.trim());
-				this.repo.add({ title: e.target.value.trim(), completed: false });
+				var nowDt = new Date();
+				const value = e.target.value.trim() + ' - ' + nowDt.toDateString();
+				this.repo.add({ title: value, completed: false });
 				e.target.value = '';
 				this.set('todoValue', '');
 			}
@@ -19,7 +22,9 @@ export default Controller.extend({
 		},
 		addTodo() {
 			if (this.todoValue) {
-				this.repo.add({ title: this.todoValue.trim() + this.get('formattedDate'), completed: false });
+				var nowDt = new Date();
+				const value = this.todoValue.trim() + ' - ' + nowDt.toDateString();
+				this.repo.add({ title: value, completed: false });
 				this.set('todoValue', '');
 			}
 		},
