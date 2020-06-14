@@ -1,0 +1,11 @@
+<div class="todo-item">
+  <div class="checkbox">
+    <input type="checkbox" checked={{todo.completed}} onchange={{action "toggleCompleted"}}>
+  </div>
+  <div class="label">
+    <label>{{todo.title}}</label>
+  </div>
+  <div class="remove">
+    <span class="remove-item" onclick={{action "removeTodo"}}> &#10006;</span>
+  </div>
+</div>

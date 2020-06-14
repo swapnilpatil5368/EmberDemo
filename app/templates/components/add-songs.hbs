@@ -1,0 +1,34 @@
+<div class="add-songs-container">
+    <div class="left">
+        <div class="form-song">
+            {{#if errorMsg }}
+            <div class="error">
+                 {{errorMsg}}
+            </div>
+            {{/if}}
+            <div class="control">
+                <input id="title" value={{titleValue}} onchange={{action "textchange"}} class="inputTxt"
+                    placeholder="Title" autofocus>
+            </div>
+            <div class="control">
+                <input id="artist" value={{artistValue}} onchange={{action "textchange"}} class="inputTxt"
+                    placeholder="Artist" autofocus>
+            </div>
+            <div class="control">
+                <input id="time" value={{timeValue}} onchange={{action "textchange"}} class="inputTxt"
+                    placeholder="Time" autofocus>
+            </div>
+            <div class="btn-group">
+                <button class="btn m-r-20" id="addSongBtn" onclick={{action "addSong"}}>Add</button>
+                <button class="btn" id="resetBtn" onclick={{action "resetFields"}}>Reset</button>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        {{display-songs songList=songs}}
+    </div>
+
+</div>
+
+
+{{yield}}

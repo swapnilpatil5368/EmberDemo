@@ -1,0 +1,9 @@
+{{#if todos.length}}
+  <div class="todo-list">
+    {{#each todos as |todo|}}
+      {{todo-item
+        todo=todo
+      }}
+    {{/each}}
+  </div>
+{{/if}}

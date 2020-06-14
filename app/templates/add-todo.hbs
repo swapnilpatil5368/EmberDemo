@@ -1,0 +1,18 @@
+<div class="menu">
+  <div>{{#link-to "add-todo" activeClass="menuItems"}}My Todos{{/link-to}}</div>
+  <div>{{#link-to "songs" activeClass="menuItems"}}Songs{{/link-to}}</div>
+</div>
+
+<div class="container">
+  <div class="todo-container">
+    <div class="todo-items">
+      <input id="newTodoTxt1" value={{todoValue}} class="inputTxt" onkeydown={{action "createTodo"}}
+        placeholder="Enter Todo" autofocus>
+      <button class="btn" id="saveBtn1" onclick={{action "addTodo"}}>Save</button>
+    </div>
+    {{#if model.length}}
+    {{todo-list todos=model}}
+    <button class="clearBtn" id="clearCompleteBtn" onclick={{action "clearCompleteItem"}}>Clear Completed Todos</button>
+    {{/if}}
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="table-container">
+    <div class="row table-header">
+        <div class="row-item">
+            Title
+        </div>
+        <div class="row-item">
+            Artist
+        </div>
+        <div class="row-item">
+            Time
+        </div>
+    </div>
+    {{#if songList.length}}
+    {{#each songList as |song|}}
+    <div class="row">
+        <div class="row-item">
+            {{song.title}}
+        </div>
+        <div class="row-item">
+            {{song.artist}}
+        </div>
+        <div class="row-item">
+            {{song.time}}
+        </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="no-data">
+        No songs available
+    </div>
+    {{/if}}
+
+</div>
+{{yield}}

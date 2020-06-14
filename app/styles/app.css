@@ -1,0 +1,123 @@
+.welcome-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputTxt{
+    height: 15px;
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.btn{
+border:1px solid gray;
+padding: 10px;
+width: 80px;
+}
+
+.clearBtn{
+border:1px solid gray;
+padding: 10px;
+width: 250px;
+}
+
+.menu{
+    display: flex;
+    padding: 20px;
+    margin:5px;
+    flex-direction: menu;
+    justify-content: center;
+}
+
+.menuItems{
+    padding: 20px;
+    margin:5px;
+}
+
+.header{
+    margin: 10px;;
+}
+
+.todo-item{
+    padding: 15px;
+    display: flex;
+    flex-direction: row;  
+}
+
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    overflow-wrap: break-word;
+}
+
+.add-songs-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.table-container{
+    padding: 10px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.table-header{
+    background-color: #808080b3;
+    color: whitesmoke;
+}
+
+.row-item{
+    padding: 20px;
+    border: 1px solid black;
+    width: 150px;
+    overflow-wrap: break-word;
+}
+
+.no-data{
+    padding: 25px;
+    border: 1px solid black;
+}
+
+.control{
+    padding: 25px;
+}
+
+.btn-group{
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.m-r-20{
+    margin-right: 20px;
+}
+
+.error{
+    color: red;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.remove-item{
+    padding-left: 20px;
+    cursor: pointer;
+    opacity: 0.2;
+    float: right;
+}
+
+.remove-item:hover{
+    color: red;
+    opacity: 1;
+}
